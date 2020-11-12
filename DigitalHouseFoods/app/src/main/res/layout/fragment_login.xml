@@ -9,7 +9,7 @@
     tools:context=".login.view.LoginFragment">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtEmailLogin"
+            android:id="@+id/txtEmail_loginFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
@@ -23,14 +23,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/txtPasswordLogin"
+            android:id="@+id/txtPassword_loginFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop"
             android:hint="@string/password"
             app:endIconMode="password_toggle"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtEmailLogin">
+            app:layout_constraintTop_toBottomOf="@+id/txtEmail_loginFragment">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -49,7 +49,7 @@
             android:background="#9AFF0000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPasswordLogin" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPassword_loginFragment" />
 
         <TextView
             android:id="@+id/textView"
@@ -59,14 +59,14 @@
             android:layout_marginBottom="250dp"
             android:gravity="center"
             android:text="@string/or"
-            app:layout_constraintBottom_toTopOf="@+id/btnRegisterLogin_loginFragment"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegister_loginFragment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnLogin_loginFragment" />
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRegisterLogin_loginFragment"
+            android:id="@+id/btnRegister_loginFragment"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

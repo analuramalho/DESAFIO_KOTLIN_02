@@ -29,8 +29,12 @@ class LoginFragment : Fragment() {
 
         val navController= Navigation.findNavController(view)
 
-        view.findViewById<Button>(R.id.btnRegisterLogin_loginFragment).setOnClickListener{
+        view.findViewById<Button>(R.id.btnRegister_loginFragment).setOnClickListener{
             navController.navigate(R.id.registerFragment)
+        }
+
+        view.findViewById<Button>(R.id.btnLogin_loginFragment).setOnClickListener{
+            navController.navigate(R.id.menuListFragment)
         }
     }
     companion object {

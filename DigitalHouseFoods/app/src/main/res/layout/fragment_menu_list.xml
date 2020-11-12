@@ -6,10 +6,15 @@
     android:orientation="vertical"
     tools:context=".menuListFoods.view.MenuListFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <!--<androidx.recyclerview.widget.RecyclerView
         android:id="@+id/minhaLista"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_list" />
+        tools:listitem="@layout/item_list" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Lista funcionando hehhehe"/>
 
 </FrameLayout>
