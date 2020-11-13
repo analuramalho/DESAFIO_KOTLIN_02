@@ -62,12 +62,12 @@ class LoginFragment : Fragment() {
         val senhaText = senha?.editText?.text.toString()
 
         if (emailText.trim() == "") {
-            email?.error = "Informe o email"
+            email?.error = getString(R.string.erro_email)
             return false
         }
 
         if (senhaText.trim() == "") {
-            senha?.error = "Informe a senha"
+            senha?.error = getString(R.string.erro_senha)
             return false
         }
 
@@ -79,7 +79,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun redirecionaRegister() {
-        navController!!.navigate(R.id.action_loginFragment_to_menuListFragment)
+        navController!!.navigate(R.id.action_loginFragment_to_registerFragment)
     }
 
 
