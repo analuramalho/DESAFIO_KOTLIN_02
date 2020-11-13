@@ -9,18 +9,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.digitalhousefoods.R
 import com.example.digitalhousefoods.menuListFoods.model.Restaurantes
 
-class MenuListAdapter(private val dataSet:List<Restaurantes>):
+class MenuListAdapter(private val dataSet: List<Restaurantes>) :
     RecyclerView.Adapter<MenuListAdapter.MenuListViewHolder>() {
 
-    class MenuListViewHolder(view: View):RecyclerView.ViewHolder(view) {
+    class MenuListViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val nome: TextView = view.findViewById(R.id.txtNomeRestaurante)
         private val endereco: TextView = view.findViewById(R.id.txtEndereco)
         private val funcionamento: TextView = view.findViewById(R.id.txtFuncionamento)
 
         fun bind(restaurantes: Restaurantes) {
-            nome.text=restaurantes.nome
-            endereco.text=restaurantes.endereco
-            funcionamento.text=restaurantes.funcionamento
+
+            nome.text = restaurantes.nome
+            endereco.text = restaurantes.endereco
+            funcionamento.text = restaurantes.funcionamento
         }
 
     }
@@ -29,7 +30,7 @@ class MenuListAdapter(private val dataSet:List<Restaurantes>):
         parent: ViewGroup,
         viewType: Int
     ): MenuListAdapter.MenuListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
 
         return MenuListViewHolder(view)
     }
@@ -38,6 +39,6 @@ class MenuListAdapter(private val dataSet:List<Restaurantes>):
         holder.bind(dataSet[position])
     }
 
-    override fun getItemCount()=dataSet.size
+    override fun getItemCount() = dataSet.size
 
 }
