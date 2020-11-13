@@ -10,7 +10,7 @@
         android:id="@+id/loginFragment"
         android:name="com.example.digitalhousefoods.login.view.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
@@ -22,7 +22,7 @@
         android:id="@+id/registerFragment"
         android:name="com.example.digitalhousefoods.register.view.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_menuListFragment"
             app:destination="@id/menuListFragment" />
@@ -31,5 +31,23 @@
         android:id="@+id/menuListFragment"
         android:name="com.example.digitalhousefoods.menuListFoods.view.MenuListFragment"
         android:label="fragment_menu_list"
-        tools:layout="@layout/fragment_menu_list" />
+        tools:layout="@layout/fragment_menu_list" >
+        <action
+            android:id="@+id/action_menuListFragment_to_DetalheRestauranteFragment"
+            app:destination="@id/DetalheRestauranteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DetalheRestauranteFragment"
+        android:name="com.example.digitalhousefoods.detalhesRestaurante.view.DetalheRestauranteFragment"
+        android:label="fragment_detalhe_restaurant"
+        tools:layout="@layout/fragment_detalhe_restaurant" >
+        <action
+            android:id="@+id/action_DetalheRestauranteFragment_to_detalhePratoFragment"
+            app:destination="@id/detalhePratoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalhePratoFragment"
+        android:name="com.example.digitalhousefoods.detalhesPrato.view.DetalhePratoFragment"
+        android:label="fragment_detalhe_prato"
+        tools:layout="@layout/fragment_detalhe_prato" />
 </navigation>
