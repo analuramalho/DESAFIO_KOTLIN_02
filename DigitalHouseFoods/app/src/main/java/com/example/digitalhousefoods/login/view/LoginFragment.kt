@@ -8,13 +8,15 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.digitalhousefoods.R
+import com.google.android.material.textfield.TextInputLayout
 import kotlinx.android.synthetic.main.fragment_login.*
 
 class LoginFragment : Fragment() {
-    lateinit var loginView: View
+    private var navController: NavController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,29 +26,63 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        loginView = inflater.inflate(R.layout.fragment_login, container, false)
-        return loginView
+        return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val navController = Navigation.findNavController(view)
+        navController = findNavController()
 
-        view.findViewById<Button>(R.id.btnRegister_loginFragment).setOnClickListener {
-            navController.navigate(R.id.registerFragment)
+        val btnRegister = view.findViewById<Button>(R.id.btnRegister_loginFragment)
+        btnRegister.setOnClickListener {
+           redirecionaRegister()
         }
 
-        view.findViewById<Button>(R.id.btnLogin_loginFragment).setOnClickListener {
-                navController.navigate(R.id.menuListFragment)
-            }
-    }
+        val btnLogin = view.findViewById<Button>(R.id.btnLogin_loginFragment)
+        btnLogin.setOnClickListener {
+           redirecionaMenuList()
+        }
 
+    }
 
     companion object {
         @JvmStatic
         fun newInstance() = LoginFragment()
     }
+
+
+    private fun validarCampos(): Boolean {
+        val email = view?.findViewById<TextInputLayout>(R.id.txtEmail_loginFragment)
+        email?.error = null
+        val emailText = email?.editText?.text.toString()
+
+        val senha = view?.findViewById<TextInputLayout>(R.id.txtPassword_loginFragment)
+        senha?.error = null
+        val senhaText = senha?.editText?.text.toString()
+
+        if (emailText.trim() == "") {
+            email?.error = "Informe o email"
+            return false
+        }
+
+        if (senhaText.trim() == "") {
+            senha?.error = "Informe a senha"
+            return false
+        }
+
+        return true
+    }
+
+    private fun redirecionaMenuList() {
+        if (validarCampos()) navController!!.navigate(R.id.action_loginFragment_to_menuListFragment)
+    }
+
+    private fun redirecionaRegister() {
+        navController!!.navigate(R.id.action_loginFragment_to_menuListFragment)
+    }
+
+
 }
 
 
