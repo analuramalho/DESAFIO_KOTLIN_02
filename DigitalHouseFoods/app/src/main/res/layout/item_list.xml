@@ -3,14 +3,15 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/card"
+    android:id="@+id/cardRestaurante"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="@dimen/corner_cardx"
     app:cardElevation="10dp"
     app:layout_constraintTop_toTopOf="parent"
-    tools:layout_editor_absoluteX="8dp">
+    tools:layout_editor_absoluteX="8dp"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,10 +20,11 @@
 
         <!-- Media -->
         <ImageView
+            android:id="@+id/imageMenu"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@mipmap/ic_launcher_splash_screen" />
+            app:srcCompat="@drawable/splash" />
 
         <LinearLayout
             android:layout_width="match_parent"
