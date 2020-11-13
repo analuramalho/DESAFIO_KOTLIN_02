@@ -19,6 +19,18 @@ class CardapioRepository(private val context: Context) {
                 ),
                 Cardapio(
                     "Salada com Molho Gengibre", R.drawable.restaurante2
+                ),
+                Cardapio(
+                    "Salada com Molho Gengibre", R.drawable.restaurante2
+                ),
+                Cardapio(
+                    "Salada com Molho Gengibre", R.drawable.restaurante2
+                ),
+                Cardapio(
+                    "Salada com Molho Gengibre", R.drawable.restaurante2
+                ),
+                Cardapio(
+                    "Salada com Molho Gengibre", R.drawable.restaurante2
                 )
             )
         )

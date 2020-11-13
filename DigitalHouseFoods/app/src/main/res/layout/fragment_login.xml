@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
+        android:textColorHint="@color/textcolor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -27,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/marginTop"
         android:hint="@string/password"
+        android:textColorHint="@color/textcolor"
         app:endIconMode="password_toggle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEmail_loginFragment">
@@ -42,8 +44,12 @@
         android:id="@+id/btnLogin_loginFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/marginTop"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/botaologin"
+        android:padding="15dp"
+        app:cornerRadius="5dp"
         android:text="@string/login"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPassword_loginFragment" />
@@ -67,9 +73,12 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/marginTop"
+        android:layout_marginTop="156dp"
+        android:backgroundTint="@color/botaoregister"
         android:text="@string/register"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        app:cornerRadius="5dp"
+        android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
